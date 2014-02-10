@@ -1,0 +1,44 @@
+CECS 424 Assignment 1
+
+We have ten coins in a row, five heads and five tails, tightly packed with no 
+gaps between adjacent coins.
+
+ HHHHHTTTTT
+
+The object is to rearrange the coins into an alternating heads/tails pattern, 
+i.e., one of the following two patterns:
+
+ HTHTHTHTHT
+
+ THTHTHTHTH
+
+Again there are no gaps between adjacent coins.  The rearrangement must be 
+accomplished in five "moves" where a move consists of taking any two touching 
+coins and moving them into a two-coin gap, if such a gap exists, or to one end 
+of the row, if no such gap exists.  For example, initially there is no 
+two-coin gap, so a possible move would be to take the "HT" coins in the center 
+and move them to the right end, yielding
+
+ HHHH--TTTTHT
+
+Now there is a two-coin gap, so on the next move we would have to take two 
+adjacent coins and move them into the gap, e.g., we could try
+
+ HHHHTHTTT--T
+
+As these examples illustrate, the coins are not allowed to switch places 
+during the move, i.e., of the two moved coins, the one on the left before the 
+move must remain on the left after the move.  Also, moving coins to the end of 
+the row is illegal if there is a two-coin interior gap.  The two coins that 
+are moved must be touching; so for example the isolated "T" at the right end 
+in the last picture above cannot be moved on the next move.
+
+Write Ruby program to play this game. Allow five moves. Use strings and 
+display the string after each move. At each move display the string and let 
+the user select the position of the left of the two characters to move by 
+spacing to it with the cursor under that left character of the two. Then 
+print the string again and let the user space to the left position to where 
+the two characters should be moved. Use the "split" method twith an empty 
+string argument to convert the string to an array. Make the move and use the 
+"join" method to convert the array to a string. Repeat until five moves have 
+been made.  
